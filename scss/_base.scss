@@ -1,0 +1,28 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: $body-fs;
+}
+
+body {
+
+    font: {
+        size: 1rem;
+        family: 'Plus Jakarta Sans', sans-serif;
+        weight: 500;
+    }
+}
+
+.wrapper {
+    @include grid-content-center;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    display: none;
+}

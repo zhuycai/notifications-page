@@ -1,0 +1,160 @@
+.notification {
+
+    min-width: 375px;
+    max-width: 800px;
+    padding: 1rem;
+
+    a {
+        text-decoration: none;
+    }
+
+    .notification-header {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        .notification-title {
+            font: {
+                size: 1.4rem;
+                weight: 800;
+            }
+        }
+
+        .notification-unread-count {
+            display: inline-block;
+            padding: 0 0.6rem;
+            margin-left: 0.4rem;
+            border-radius: 0.4rem;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+            color: $white;
+            background: $blue;
+        }
+
+        .mark-as-read {
+            border: none;
+            cursor: pointer;
+            background: none;
+            color: $dark-grayish-blue;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+
+    .notification-content {
+
+        .notification-item {
+
+            padding: 1.4rem;
+            margin: 1rem 0;
+            border-radius: 1rem;
+            background: $very-light-grayish-blue;
+            cursor: pointer;
+
+            &.read {
+                background: $white;
+
+                .notification-intro {
+
+                    .notification-brief {
+
+                        .notification-msg {
+                            display: block;
+                        }
+
+                        :nth-last-child(2)::after {
+                            content: '';
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .notification-intro {
+
+                display: flex;
+                gap: 1rem;
+
+                .avatar {
+                    width: 3rem;
+                    height: 3rem;
+                }
+
+                .notification-brief {
+
+                    line-height: 1.4rem;
+
+                    .user {
+                        color: $very-dark-blue;
+                        font-weight: 800;
+
+                        &:hover {
+                            color: $blue;
+                        }
+                    }
+
+                    .notification-state {
+                        padding: 0 0.3rem;
+                        color: $dark-grayish-blue;
+                    }
+
+                    .notification-target {
+                        font-weight: 800;
+                        color: $dark-grayish-blue;
+
+                        &:hover {
+                            color: $blue;
+                        }
+                    }
+
+                    .notification-timestamp {
+                        font-size: 0.8rem;
+                        color: $grayish-blue;
+                    }
+
+                    :nth-last-child(2):after {
+                        content: '';
+                        display: inline-block;
+                        width: 0.6rem;
+                        height: 0.6rem;
+                        margin-left: 0.8rem;
+                        border-radius: 50%;
+                        background: $red;
+                    }
+
+                    .notification-msg {
+                        display: none;
+                        padding: 1rem;
+                        margin-top: 0.8rem;
+                        border: 1px solid $light-grayish-blue-1;
+                        border-radius: 0.6rem;
+
+                        &:hover {
+                            background: $light-grayish-blue-1;
+                        }
+                    }
+                }
+
+                .your-pic {
+
+                    flex: {
+                        grow: 1;
+                        shrink: 0;
+                        basis: 3rem;
+                    }
+                    display: flex;
+                    justify-content: right;
+
+                    img {
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}

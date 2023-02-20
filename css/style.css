@@ -1,0 +1,216 @@
+/* plus-jakarta-sans-500 */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("//lib.baomitu.com/fonts/plus-jakarta-sans/plus-jakarta-sans-500.eot"); /* IE9 Compat Modes */
+  src: local("Plus Jakarta Sans"), local("PlusJakarta Sans-Normal"), url("//lib.baomitu.com/fonts/plus-jakarta-sans/plus-jakarta-sans-500.eot?#iefix") format("embedded-opentype"), url("//lib.baomitu.com/fonts/plus-jakarta-sans/plus-jakarta-sans-500.woff2") format("woff2"), url("//lib.baomitu.com/fonts/plus-jakarta-sans/plus-jakarta-sans-500.woff") format("woff"), url("//lib.baomitu.com/fonts/plus-jakarta-sans/plus-jakarta-sans-500.ttf") format("truetype"), url("//lib.baomitu.com/fonts/plus-jakarta-sans/plus-jakarta-sans-500.svg#PlusJakarta Sans") format("svg"); /* Legacy iOS */
+}
+/* plus-jakarta-sans-800 */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("//lib.baomitu.com/fonts/plus-jakarta-sans/plus-jakarta-sans-800.eot"); /* IE9 Compat Modes */
+  src: local("Plus Jakarta Sans"), local("PlusJakarta Sans-Normal"), url("//lib.baomitu.com/fonts/plus-jakarta-sans/plus-jakarta-sans-800.eot?#iefix") format("embedded-opentype"), url("//lib.baomitu.com/fonts/plus-jakarta-sans/plus-jakarta-sans-800.woff2") format("woff2"), url("//lib.baomitu.com/fonts/plus-jakarta-sans/plus-jakarta-sans-800.woff") format("woff"), url("//lib.baomitu.com/fonts/plus-jakarta-sans/plus-jakarta-sans-800.ttf") format("truetype"), url("//lib.baomitu.com/fonts/plus-jakarta-sans/plus-jakarta-sans-800.svg#PlusJakarta Sans") format("svg"); /* Legacy iOS */
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+}
+
+.wrapper {
+  display: grid;
+  place-content: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  display: none;
+}
+
+.notification {
+  min-width: 375px;
+  max-width: 800px;
+  padding: 1rem;
+}
+.notification a {
+  text-decoration: none;
+}
+.notification .notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.notification .notification-header .notification-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.notification .notification-header .notification-unread-count {
+  display: inline-block;
+  padding: 0 0.6rem;
+  margin-left: 0.4rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: hsl(0deg, 0%, 100%);
+  background: hsl(219deg, 85%, 26%);
+}
+.notification .notification-header .mark-as-read {
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: hsl(219deg, 12%, 42%);
+}
+.notification .notification-header .mark-as-read:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.notification .notification-content .notification-item {
+  padding: 1.4rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  background: hsl(210deg, 60%, 98%);
+  cursor: pointer;
+}
+.notification .notification-content .notification-item.read {
+  background: hsl(0deg, 0%, 100%);
+}
+.notification .notification-content .notification-item.read .notification-intro .notification-brief .notification-msg {
+  display: block;
+}
+.notification .notification-content .notification-item.read .notification-intro .notification-brief :nth-last-child(2)::after {
+  content: "";
+  display: none;
+}
+.notification .notification-content .notification-item .notification-intro {
+  display: flex;
+  gap: 1rem;
+}
+.notification .notification-content .notification-item .notification-intro .avatar {
+  width: 3rem;
+  height: 3rem;
+}
+.notification .notification-content .notification-item .notification-intro .notification-brief {
+  line-height: 1.4rem;
+}
+.notification .notification-content .notification-item .notification-intro .notification-brief .user {
+  color: hsl(224deg, 21%, 14%);
+  font-weight: 800;
+}
+.notification .notification-content .notification-item .notification-intro .notification-brief .user:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.notification .notification-content .notification-item .notification-intro .notification-brief .notification-state {
+  padding: 0 0.3rem;
+  color: hsl(219deg, 12%, 42%);
+}
+.notification .notification-content .notification-item .notification-intro .notification-brief .notification-target {
+  font-weight: 800;
+  color: hsl(219deg, 12%, 42%);
+}
+.notification .notification-content .notification-item .notification-intro .notification-brief .notification-target:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.notification .notification-content .notification-item .notification-intro .notification-brief .notification-timestamp {
+  font-size: 0.8rem;
+  color: hsl(219deg, 14%, 63%);
+}
+.notification .notification-content .notification-item .notification-intro .notification-brief :nth-last-child(2):after {
+  content: "";
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-left: 0.8rem;
+  border-radius: 50%;
+  background: hsl(1deg, 90%, 64%);
+}
+.notification .notification-content .notification-item .notification-intro .notification-brief .notification-msg {
+  display: none;
+  padding: 1rem;
+  margin-top: 0.8rem;
+  border: 1px solid hsl(211deg, 68%, 94%);
+  border-radius: 0.6rem;
+}
+.notification .notification-content .notification-item .notification-intro .notification-brief .notification-msg:hover {
+  background: hsl(211deg, 68%, 94%);
+}
+.notification .notification-content .notification-item .notification-intro .your-pic {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 3rem;
+  display: flex;
+  justify-content: right;
+}
+.notification .notification-content .notification-item .notification-intro .your-pic img {
+  width: 3rem;
+  height: 3rem;
+}
+
+/*# sourceMappingURL=style.css.map */
