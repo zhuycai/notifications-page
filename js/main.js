@@ -1,5 +1,4 @@
 let markAsRead = document.querySelector('.mark-as-read');
-// let notification = document.querySelector('.notification');
 let notifications = document.querySelectorAll('.notification-item');
 let unreadCount = document.querySelector('.notification-unread-count');
 
@@ -21,6 +20,7 @@ notifications.forEach(ele => {
     ele.addEventListener('click', function() {
         this.classList.add('read');
         unreadCount.innerHTML = countUnread();
+        ele.querySelector('.notification-msg')?.classList.toggle('appear');
     });
 });
 

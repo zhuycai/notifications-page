@@ -62,9 +62,9 @@
 
                     .notification-brief {
 
-                        .notification-msg {
-                            display: block;
-                        }
+                        // .notification-msg {
+                        //     display: block;
+                        // }
 
                         :nth-last-child(2)::after {
                             content: '';
@@ -132,6 +132,10 @@
                         margin-top: 0.8rem;
                         border: 1px solid $light-grayish-blue-1;
                         border-radius: 0.6rem;
+
+                        &.appear {
+                            display: block;
+                        }
 
                         &:hover {
                             background: $light-grayish-blue-1;
