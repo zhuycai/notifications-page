@@ -82,7 +82,7 @@ body {
   font-weight: 500;
 }
 
-.wrapper {
+.main {
   display: grid;
   place-content: center;
 }
@@ -92,7 +92,8 @@ img {
 }
 
 h1 {
-  display: none;
+  position: absolute;
+  left: -9999999999px;
 }
 
 .notification {

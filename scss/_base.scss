@@ -15,7 +15,7 @@ body {
     }
 }
 
-.wrapper {
+.main {
     @include grid-content-center;
 }
 
@@ -24,5 +24,6 @@ img {
 }
 
 h1 {
-    display: none;
+    position: absolute;
+    left: -9999999999px;
 }
